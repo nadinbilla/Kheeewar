@@ -11,8 +11,7 @@ const starters = ["عَرِّفْنِي بِنَفْسِكَ", "مَاذَا ف�
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"chat" | "examples">("chat");
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", content: "مَرْحَبًا! أَنَا صَدِيقُكَ فِي تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ. 😊
-كَيْفَ كَانَ يَوْمُكَ؟ هَيَّا نَتَحَادَثْ بِالْعَرَبِيَّةِ!" }
+    { role: "assistant", content: "مَرْحَبًا! أَنَا صَدِيقُكَ فِي تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ. 😊\\nكَيْفَ كَانَ يَوْمُكَ؟ هَيَّا نَتَحَادَثْ بِالْعَرَبِيَّةِ!" }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -127,8 +126,7 @@ export default function Home() {
             </aside>
 
             <div className="chat-card">
-              <div className="chat-head"><div className="ai-avatar"><Bot size={22} /></div><div><b>Teman Bahasa Arab</b><small><span className="online-dot" /> Online · siap menemanimu</small></div><button className="icon-button reset-btn" title="Mulai ulang" onClick={() => { setMessages([{ role: "assistant", content: "مَرْحَبًا! أَنَا صَدِيقُكَ فِي تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ. 😊
-كَيْفَ كَانَ يَوْمُكَ؟ هَيَّا نَتَحَادَثْ بِالْعَرَبِيَّةِ!" }]); setError(""); }}><Plus size={18} /></button></div>
+              <div className="chat-head"><div className="ai-avatar"><Bot size={22} /></div><div><b>Teman Bahasa Arab</b><small><span className="online-dot" /> Online · siap menemanimu</small></div><button className="icon-button reset-btn" title="Mulai ulang" onClick={() => { setMessages([{ role: "assistant", content: "مَرْحَبًا! أَنَا صَدِيقُكَ فِي تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ. 😊\\nكَيْفَ كَانَ يَوْمُكَ؟ هَيَّا نَتَحَادَثْ بِالْعَرَبِيَّةِ!" }]); setError(""); }}><Plus size={18} /></button></div>
               <div className="messages">
                 <div className="date-divider"><span>مَرْحَبًا · SELAMAT DATANG</span></div>
                 {messages.map((message, index) => (
