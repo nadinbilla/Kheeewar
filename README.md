@@ -4,6 +4,11 @@ A pink-and-white Arabic conversation learning website powered by an AI assistant
 
 ## Features
 - Practice Arabic conversation with an AI partner.
+- CEFR-style levels A1, A2, B1, and B2 with adaptive AI responses.
+- Choose an AI persona: teacher, friend, or native-speaker simulation.
+- Microphone speech input (browser Web Speech API) and Arabic text-to-speech.
+- AI-generated text-based evaluation for grammar, vocabulary, and relevance.
+- Conversation history and vocabulary collection saved in browser localStorage.
 - Starter conversation examples for greetings, introductions, café visits, shopping, and asking directions.
 - Arabic-first RTL interface with optional Indonesian translations in example cards.
 - Suggested prompts, clear chat, and responsive layout.
@@ -34,3 +39,9 @@ Do not commit `.env.local` or expose your API key in client-side code.
 - Theme and layout: `app/globals.css`
 - AI system prompt and API: `app/api/chat/route.ts`
 - Conversation examples: `lib/examples.ts`
+
+## Notes about learning features
+- Microphone input requires browser permission and works best in Chrome/Edge over HTTPS (Vercel provides HTTPS).
+- Text-to-speech voice availability depends on the browser and installed Arabic voices.
+- Speaking evaluation in this version is an AI estimate based on the speech-recognition transcript, not acoustic pronunciation scoring.
+- History and vocabulary are stored locally in the current browser/device. Add authentication and a database (e.g. Supabase/Postgres) if you need cross-device accounts and centralized student records.
